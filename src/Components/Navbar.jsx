@@ -59,13 +59,13 @@ export function Nav() {
               <div className="flex items-center gap-x-1">
                 <Button
                   size="sm"
-                  className="hidden lg:inline-block rounded-lg text-green-500 bg-transparent hover:shadow-none shadow-none"
+                  className="hidden lg:inline-block rounded-lg text-green-600 bg-transparent hover:shadow-none shadow-none"
                 >
                   <span>Log In</span>
                 </Button>
                 <Button
                   size="sm"
-                  className="hidden lg:inline-block rounded-lg bg-green-500"
+                  className="hidden lg:inline-block rounded-lg bg-green-600"
                 >
                   <span>Book a demo</span>
                 </Button>

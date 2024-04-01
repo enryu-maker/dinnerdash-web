@@ -4,6 +4,9 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: ["./src/**/*.{html,js,jsx}", "node_modules/flowbite-react/lib/esm/**/*.js"],
   theme: {
+    colors: {
+      'green-600': '#16a34a',
+    },
     fontFamily: {
       'Poppins': "Poppins",
     },

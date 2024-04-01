@@ -1,14 +1,26 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Carousel } from "@material-tailwind/react";
-import { motion } from "framer-motion";
+import {
+  Carousel,
+  Card,
+  CardBody,
+  CardFooter,
+  Typography,
+  Button,
+} from "@material-tailwind/react";
+import { motion, useSpring } from "framer-motion";
 import burger from "../Images/burger.png";
 import fries from "../Images/fries.png";
 import colddrink from "../Images/cold-drink.png";
 import smoothie from "../Images/smoothie.png";
-
+import maibaap from "../Images/maibaap.jpeg";
 import phone from "../Images/phone.png";
 import qr from "../Images/qr.png";
 import qrscanning from "../Images/qrscanning.jpeg";
+import swiggy from "../Images/swiggy-logo.png";
+import zomato from "../Images/Zomato_logoo.jpeg";
+import razorpay from "../Images/Razorpay_logo.png";
+import phonepe from "../Images/PhonePe_Logo.png";
+import stripe from "../Images/stripe.png";
 
 function Home() {
   const CountUpAnimation = ({
@@ -375,11 +387,16 @@ function Home() {
                 <h1>Scan QR Code to see</h1>
                 <h1 className="text-2xl">How your POS will be like</h1>
               </div>
-              {/* <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
-                <h1 className="text-2xl">NOTE</h1>
-                <h1 className="text-3xl">This is a Dummy Menu</h1>
+              <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
+                <h1 className="text-6xl scale-150 text-center">&lt;&lt;</h1>
               </div>
-              <div className="w-full text-center">
+              <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
+                <h1 className="text-xl  text-justify">
+                  Discover a seamless fusion of innovation and reliability,
+                  enhancing every aspect of your dining establishment
+                </h1>
+              </div>
+              {/* <div className="w-full text-center">
                 <span className="text-black text-2xl text-justify">
                   Our digital menu for restaurants is powered by technology that
                   has been
@@ -392,7 +409,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="h-screen w-full bg-green-600">
+        <div className="h-[100vh] w-full bg-green-600">
           <div className="h-full m-auto flex justify-center items-center">
             <div className="h-5/6">
               <Carousel
@@ -415,39 +432,217 @@ function Home() {
               >
                 {/* Slide 1 */}
                 <div className="h-full w-full flex p-20">
-                  <div className="text-white text-left">
+                  <div className="text-white text-left w-3/4">
                     <h1 className="text-4xl font-bold mb-4">
                       Welcome to Our Website
                     </h1>
                     <p className="text-lg">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium, deleniti libero dignissimos laboriosam dolor
+                      quas blanditiis, perspiciatis corporis expedita saepe nam,
+                      doloremque quisquam dolorum aliquid? Nostrum vero nam
+                      repellat inventore.
                     </p>
+                    <p className="text-lg italic text-black pt-4 font-semibold">
+                      Akif Khan
+                    </p>
+                    <p className="text-lg italic text-black">Owner, NerdTech</p>
+                  </div>
+                  <div className="w-2/4 justify-center items-center border-0 flex">
+                    <img src={maibaap} className="w-2/3 h-[80vh]" />
                   </div>
                 </div>
 
                 {/* Slide 2 */}
-                <div className="h-full w-full flex items-center justify-center">
-                  <img
-                    src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-                    alt="image 1"
-                    className="h-full w-full object-cover"
-                  />
+                <div className="h-full w-full flex p-20">
+                  <div className="text-white text-left w-3/4">
+                    <h1 className="text-4xl font-bold mb-4">
+                      Welcome to Our Website
+                    </h1>
+                    <p className="text-lg">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium, deleniti libero dignissimos laboriosam dolor
+                      quas blanditiis, perspiciatis corporis expedita saepe nam,
+                      doloremque quisquam dolorum aliquid? Nostrum vero nam
+                      repellat inventore.
+                    </p>
+                    <p className="text-lg italic text-black pt-4 font-semibold">
+                      Akif Khan
+                    </p>
+                    <p className="text-lg italic text-black">Owner, NerdTech</p>
+                  </div>
+                  <div className="w-2/4 justify-center items-center border-0 flex">
+                    <img src={maibaap} className="w-2/3 h-[80vh]" />
+                  </div>
                 </div>
 
                 {/* Slide 3 */}
-                <div className="h-full w-full flex items-center justify-center">
-                  <div className="text-white text-center">
+                <div className="h-full w-full flex p-20">
+                  <div className="text-white text-left w-3/4">
                     <h1 className="text-4xl font-bold mb-4">
-                      Discover Our Services
+                      Welcome to Our Website
                     </h1>
                     <p className="text-lg">
-                      Sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium, deleniti libero dignissimos laboriosam dolor
+                      quas blanditiis, perspiciatis corporis expedita saepe nam,
+                      doloremque quisquam dolorum aliquid? Nostrum vero nam
+                      repellat inventore.
                     </p>
+                    <p className="text-lg italic text-black pt-4 font-semibold">
+                      Akif Khan
+                    </p>
+                    <p className="text-lg italic text-black">Owner, NerdTech</p>
+                  </div>
+                  <div className="w-2/4 justify-center items-center border-0 flex">
+                    <img src={maibaap} className="w-2/3 h-[80vh]" />
                   </div>
                 </div>
               </Carousel>
             </div>
+          </div>
+        </div>
+        <div className="bg-white h-[100vh] w-full m-auto justify-center align-middle flex flex-col">
+          <div className="text-center p-20">
+            <h1 className="text-5xl p-2 text-green-600">Our Integrations</h1>
+            <p>
+              Empower your journey with these dynamic tools for accelerated goal
+              achievement
+            </p>
+            <motion.div className="flex flex-row bg-white pt-10">
+              <motion.Card
+                whileHover={{
+                  y: -10,
+
+                  initial: {
+                    transform: "translateZ(4px) translateY(-2px)",
+                  },
+                  animate: {
+                    transform: "translateZ(32px) translateY(-40px)",
+                  },
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    duration: 0.75,
+                    ease: "easeInOut",
+                    // type: "spring",
+                    // damping: 10,
+                    // stiffness: 10,
+                  },
+                }}
+                className="rounded-xl mt-6 w-96 h-40 border-2 border-green-600 bg-white text-white m-auto flex justify-center align-middle"
+              >
+                <CardBody className="m-auto flex justify-center align-middle">
+                  <img src={swiggy} className="w-96 h-30" />
+                </CardBody>
+              </motion.Card>
+              <motion.Card
+                whileHover={{
+                  y: -10,
+                  // scale: 1.05,
+                  initial: {
+                    transform: "translateZ(4px) translateY(-2px)",
+                  },
+                  animate: {
+                    transform: "translateZ(32px) translateY(-40px)",
+                  },
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    duration: 0.75,
+                    ease: "easeInOut",
+                    // type: "spring",
+                    // damping: 10,
+                    // stiffness: 10,
+                  },
+                }}
+                className="rounded-xl mt-6 w-96 h-40 border-2 border-green-600 bg-white text-white m-auto flex justify-center align-middle"
+              >
+                <CardBody className="m-auto flex justify-center align-middle">
+                  <img src={zomato} className="w-96 h-30" />
+                </CardBody>
+              </motion.Card>
+              <motion.Card
+                whileHover={{
+                  y: -10,
+                  // scale: 1.05,
+                  initial: {
+                    transform: "translateZ(4px) translateY(-2px)",
+                  },
+                  animate: {
+                    transform: "translateZ(32px) translateY(-40px)",
+                  },
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    duration: 0.75,
+                    ease: "easeInOut",
+                    // type: "spring",
+                    // damping: 10,
+                    // stiffness: 10,
+                  },
+                }}
+                className="rounded-xl mt-6 w-96 h-40 border-2 border-green-600 bg-white text-white m-auto flex justify-center align-middle"
+              >
+                <CardBody className="m-auto flex justify-center align-middle">
+                  <img src={razorpay} className="w-96 h-30" />
+                </CardBody>
+              </motion.Card>
+            </motion.div>
+            <motion.div className="flex flex-row justify-center bg-white pt-10">
+              <motion.Card
+                whileHover={{
+                  y: -10,
+                  // scale: 1.05,
+                  initial: {
+                    transform: "translateZ(4px) translateY(-2px)",
+                  },
+                  animate: {
+                    transform: "translateZ(32px) translateY(-40px)",
+                  },
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    duration: 0.75,
+                    ease: "easeInOut",
+                    // type: "spring",
+                    // damping: 10,
+                    // stiffness: 10,
+                  },
+                }}
+                className="rounded-xl w-96 h-40 border-2 border-green-600 bg-white text-white m-auto flex justify-center align-middle"
+              >
+                <CardBody className="m-auto flex justify-center align-middle">
+                  <img src={phonepe} className="w-96 h-30" />
+                </CardBody>
+              </motion.Card>
+              <motion.Card
+                whileHover={{
+                  y: -10,
+                  // scale: 1.05,
+                  initial: {
+                    transform: "translateZ(4px) translateY(-2px)",
+                  },
+                  animate: {
+                    transform: "translateZ(32px) translateY(-40px)",
+                  },
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    duration: 0.75,
+                    ease: "easeInOut",
+                    // type: "spring",
+                    // damping: 10,
+                    // stiffness: 10,
+                  },
+                }}
+                className="rounded-xl w-96 h-40 border-2 border-green-600 bg-white text-white m-auto flex flex-col justify-center align-middle"
+              >
+                <CardBody className="m-auto flex justify-center align-middle flex-col">
+                  <img src={stripe} className="w-96 h-30" />
+                </CardBody>
+              </motion.Card>
+            </motion.div>
           </div>
         </div>
       </div>

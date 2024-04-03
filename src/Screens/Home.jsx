@@ -9,18 +9,21 @@ import {
 } from "@material-tailwind/react";
 import { motion, useSpring } from "framer-motion";
 import burger from "../Images/burger.png";
-import fries from "../Images/fries.png";
-import colddrink from "../Images/cold-drink.png";
-import smoothie from "../Images/smoothie.png";
 import maibaap from "../Images/maibaap.jpeg";
 import phone from "../Images/phone.png";
 import qr from "../Images/qr.png";
-import qrscanning from "../Images/qrscanning.jpeg";
 import swiggy from "../Images/swiggy-logo.png";
 import zomato from "../Images/Zomato_logoo.jpeg";
 import razorpay from "../Images/Razorpay_logo.png";
 import phonepe from "../Images/PhonePe_Logo.png";
 import stripe from "../Images/stripe.png";
+import scanner from "../Images/scanner.gif";
+import img1 from "../Images/img1.png";
+import img2 from "../Images/img2.png";
+import img3 from "../Images/img3.png";
+import page1 from "../Images/1.png";
+import page2 from "../Images/2.png";
+import page3 from "../Images/3.png";
 
 function Home() {
   const CountUpAnimation = ({
@@ -147,10 +150,10 @@ function Home() {
           <h1 className="text-center font-semibold text-4xl mt-10 -mb-24 text-green-600">
             QR Code Menu Helps You to
           </h1>
-          <div className="h-full m-auto flex justify-center items-center">
+          <div className="h-full m-auto flex justify-center items-center align-middle">
             <div className="h-4/6">
               <Carousel
-                autoplay={true}
+                // autoplay={true}
                 loop={true}
                 className="rounded-none"
                 navigation={({ setActiveIndex, activeIndex, length }) => (
@@ -168,22 +171,22 @@ function Home() {
                 )}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+                  src={page1}
                   alt="image 1"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-fill"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                  src={page2}
                   alt="image 2"
-                  className="h-full w-full object-cover"
+                  className="h-full w-fit object-fill"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                  src={page3}
                   alt="image 3"
-                  className="h-full w-full object-cover"
+                  className="h-full w-fit object-fill"
                 />
               </Carousel>
-              <div className="m-auto align-middle justify-center flex">
+              <div className="m-auto flex-row flex justify-center items-center align-middle">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -206,16 +209,14 @@ function Home() {
                 <motion.div className="w-full flex flex-row">
                   <div className="w-4/6">
                     <h1 className="text-4xl text-green-600 pb-4">
-                      Make Your Experience Better
+                      Increment brand review with redid menu QR codes
                     </h1>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Iure adipisci tempora magni ullam ipsa reprehenderit,
-                    voluptatem et, aperiam hic sed dolorum voluptatum, provident
-                    architecto nostrum minus! Repellendus in laborum
-                    repudiandae? Unde, ipsam? Deleniti officiis vel eligendi
-                    soluta errorrehenderit sint architecto ab.
+                    Customers will easily remember and recognize your restaurant
+                    with DinerDash's very own digital menu customization
+                    features. Stand out and get more customer interactions with
+                    your branded menu QR codes. Quick and easy to setup.
                   </div>
-                  <div className="justify-end w-2/6 ">
+                  <div className="w-2/6 flex flex-row justify-center align-middle h-full ">
                     <motion.img
                       whileHover={{
                         y: -10,
@@ -233,8 +234,8 @@ function Home() {
                           ease: "easeInOut",
                         },
                       }}
-                      src={burger}
-                      className="w-[500px] -mt-4 rotate-0"
+                      src={img3}
+                      className="w-64 -mt-4 rotate-0"
                     />
                   </div>
                 </motion.div>
@@ -261,16 +262,17 @@ function Home() {
                 <motion.div className="w-full flex flex-row">
                   <div className="w-4/6">
                     <h1 className="text-4xl text-green-600 pb-4">
-                      Make Your Experience Better
+                      Expand efficiency with less staffing
                     </h1>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Iure adipisci tempora magni ullam ipsa reprehenderit,
-                    voluptatem et, aperiam hic sed dolorum voluptatum, provident
-                    architecto nostrum minus! Repellendus in laborum
-                    repudiandae? Unde, ipsam? Deleniti officiis vel eligendi
-                    soluta errorrehenderit sint architecto ab.
+                    Your visitors can promptly put orders through DinerDash's QR
+                    code menu requesting framework without reaching staff. You
+                    can lead your clients to examine the menu QR code and easily
+                    put in their requests and pay with only a couple of taps.
+                    This enhances the requesting system, and eatery staff stays
+                    allowed to commit their significant investment to different
+                    areas of administration.
                   </div>
-                  <div className="justify-end w-2/6 ">
+                  <div className=" w-2/6 flex flex-row justify-center align-middle ">
                     <motion.img
                       whileHover={{
                         y: -10,
@@ -288,8 +290,8 @@ function Home() {
                           ease: "easeInOut",
                         },
                       }}
-                      src={burger}
-                      className="w-[500px] -mt-4 rotate-0"
+                      src={img2}
+                      className="w-64 -mt-4 rotate-0"
                     />
                   </div>
                 </motion.div>
@@ -298,16 +300,16 @@ function Home() {
                 <motion.div className="w-full flex flex-row">
                   <div className="w-4/6">
                     <h1 className="text-4xl text-green-600 pb-4">
-                      Make Your Experience Better
+                      Your accomplice in increasing your business
                     </h1>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Iure adipisci tempora magni ullam ipsa reprehenderit,
-                    voluptatem et, aperiam hic sed dolorum voluptatum, provident
-                    architecto nostrum minus! Repellendus in laborum
-                    repudiandae? Unde, ipsam? Deleniti officiis vel eligendi
-                    soluta errorrehenderit sint architecto ab.
+                    DinerDash is something beyond a computerized menu framework;
+                    we are your accomplice in hoisting and increasing your
+                    business the 'advanced' way. Make and run your missions and
+                    advancements by means of your web-based menu to help your
+                    deals. Bring your smash hit dishes and drinks up front, and
+                    prescribe food things to your clients.
                   </div>
-                  <div className="justify-end w-2/6 ">
+                  <div className=" w-2/6 flex flex-row justify-center align-middle ">
                     <motion.img
                       whileHover={{
                         y: -10,
@@ -325,8 +327,8 @@ function Home() {
                           ease: "easeInOut",
                         },
                       }}
-                      src={burger}
-                      className="w-[500px] -mt-4 rotate-0"
+                      src={img1}
+                      className="w-64 -mt-4 rotate-0"
                     />
                   </div>
                 </motion.div>
@@ -355,23 +357,12 @@ function Home() {
           </div>
         </div>
         <div className="max-h-screen h-screen w-full bg-white border-solid border-t-2 p-20 justify-center m-auto">
-          <div className="text-center">
-            <h1 className="text-6xl text-green-600">
+          {/* <div className="text-center">
+            <h1 className="text-5xl text-green-600">
               How your QR Menu will look like
             </h1>
-          </div>
-          {/* <div className="grid grid-cols-2 px-20 h-full w-full">
-            <div className="grid grid-cols-2">
-              <div className="border-solid  h-full items-center justify-center flex ">
-                <img src={phone} className="w-full m-auto" />
-              </div>
-              <div className="h-full pt-14">
-                <img src={qr} className="w-full h-2/3 " />
-              </div>
-            </div>
-
-            <div className="border-solid "></div>
           </div> */}
+
           <div className="flex flex-row h-full w-full px-20">
             <div className="border-0 ">
               <img
@@ -382,20 +373,26 @@ function Home() {
             <div className="border- w-1/4">
               <img src={qr} className="pt-6" />
             </div>
-            <div className="p-8 text-start border-0 text-white text-4xl w-1/2">
-              <div className="bg-green-600 p-4 rounded-lg">
-                <h1>Scan QR Code to see</h1>
-                <h1 className="text-2xl">How your POS will be like</h1>
+            <div className="p-8 text-start text-white text-4xl w-1/2">
+              <div className=" p-4 rounded-lg">
+                {/* <h1>Scan QR Code to see</h1>
+                <h1 className="text-2xl">How your POS will be like</h1> */}
+                <div className="text-center">
+                  <h1 className="text-4xl text-green-600">
+                    How your QR Menu will look like
+                  </h1>
+                </div>
               </div>
-              <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
+              <img src={scanner} className="w-fit h-2/3" />
+              {/* <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
                 <h1 className="text-6xl scale-150 text-center">&lt;&lt;</h1>
-              </div>
-              <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
-                <h1 className="text-xl  text-justify">
+              </div> */}
+              {/* <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
+                <h1 className="text-base  text-justify">
                   Discover a seamless fusion of innovation and reliability,
                   enhancing every aspect of your dining establishment
                 </h1>
-              </div>
+              </div> */}
               {/* <div className="w-full text-center">
                 <span className="text-black text-2xl text-justify">
                   Our digital menu for restaurants is powered by technology that
@@ -513,7 +510,7 @@ function Home() {
               <motion.Card
                 whileHover={{
                   y: -10,
-
+                  // scale: 1.05,
                   initial: {
                     transform: "translateZ(4px) translateY(-2px)",
                   },

@@ -14,7 +14,7 @@ export default function Price() {
   return (
     <div className="relative">
       {/* Background Image */}
-      <div className="h-screen w-full bg-bg bg-cover relative">
+      <div className="h-[125vh] w-full bg-bg bg-cover relative">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -31,16 +31,17 @@ export default function Price() {
               id="custom-switch-component"
               onChange={togglePricing}
               label={isYearly ? "Switch to Monthly" : "Switch to Yearly"}
-              className="h-full w-full checked:bg-green-400 text-white"
+              className="h-full w-full checked:bg-green-600 text-white active:border-none outline-none focus:ring-0 ring-0 active:ring-0"
               containerProps={{
-                className: "w-11 h-6",
+                className: "w-11 h-6 focus:outline-none", // Remove border and outline on focus
               }}
               circleProps={{
-                className: "before:hidden left-0.5 border-none",
+                className:
+                  "before:hidden left-0.5 border-none focus:border-none", // Remove border on focus
               }}
               labelProps={{
                 className: `text-${
-                  isYearly ? "green-400" : "white"
+                  isYearly ? "green-600" : "white"
                 } text-lg font-bold`, // Increase the font size here
               }}
             />
@@ -48,7 +49,7 @@ export default function Price() {
           {/* <Button onClick={togglePricing}>
             + {isYearly ? "Switch to Monthly" : "Switch to Yearly"}+{" "}
           </Button> */}
-          <div className="grid"></div>
+
           <motion.div
             class="grid grid-cols-2 gap-10 pt-2 space-x-0 space-y-0 h-full m-auto"
             animate={{ rotateY: isYearly ? 180 : 0 }}
@@ -82,7 +83,7 @@ export default function Price() {
                 <ul className="my-7 space-y-5">
                   <li className="flex space-x-3">
                     <svg
-                      className="h-5 w-5 shrink-0 text-green-400 dark:text-cyan-500"
+                      className="h-5 w-5 shrink-0 text-green-600 dark:text-cyan-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +100,7 @@ export default function Price() {
                   </li>
                   <li className="flex space-x-3">
                     <svg
-                      className="h-5 w-5 shrink-0 text-green-400 dark:text-cyan-500"
+                      className="h-5 w-5 shrink-0 text-green-600 dark:text-cyan-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +117,7 @@ export default function Price() {
                   </li>
                   <li className="flex space-x-3">
                     <svg
-                      className="h-5 w-5 shrink-0 text-green-400 dark:text-cyan-500"
+                      className="h-5 w-5 shrink-0 text-green-600 dark:text-cyan-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -184,12 +185,14 @@ export default function Price() {
                     </span>
                   </li>
                 </ul>
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   type="button"
-                  className="inline-flex w-full justify-center rounded-lg bg-green-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-cyan-200 dark:focus:ring-cyan-900"
+                  className="active:bg-white active:text-green-600 active:border-none focus:none inline-flex w-full justify-center rounded-lg bg-green-600 px-5 py-2.5 text-center text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-green-600 dark:focus:ring-cyan-900"
                 >
                   Choose plan
-                </button>
+                </motion.button>
               </Card>
             </motion.div>
             <motion.div
@@ -212,7 +215,7 @@ export default function Price() {
                 <ul className="my-7 space-y-5">
                   <li className="flex space-x-3">
                     <svg
-                      className="h-5 w-5 shrink-0 text-green-400 dark:text-cyan-500"
+                      className="h-5 w-5 shrink-0 text-green-600 dark:text-cyan-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +232,7 @@ export default function Price() {
                   </li>
                   <li className="flex space-x-3">
                     <svg
-                      className="h-5 w-5 shrink-0 text-green-400 dark:text-cyan-500"
+                      className="h-5 w-5 shrink-0 text-green-600 dark:text-cyan-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +249,7 @@ export default function Price() {
                   </li>
                   <li className="flex space-x-3">
                     <svg
-                      className="h-5 w-5 shrink-0 text-green-400 dark:text-cyan-500"
+                      className="h-5 w-5 shrink-0 text-green-600 dark:text-cyan-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -314,12 +317,14 @@ export default function Price() {
                     </span>
                   </li>
                 </ul>
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   type="button"
-                  className="inline-flex w-full justify-center rounded-lg bg-green-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-cyan-200 dark:focus:ring-cyan-900"
+                  className="active:bg-white active:text-green-600 active:border-none focus:none inline-flex w-full justify-center rounded-lg bg-green-600 px-5 py-2.5 text-center text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-green-600 dark:focus:ring-cyan-900"
                 >
                   Choose plan
-                </button>
+                </motion.button>
               </Card>
             </motion.div>
           </motion.div>

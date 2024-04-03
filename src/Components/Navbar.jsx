@@ -6,7 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-
+import logo from "../Images/logo.png";
 export function Nav() {
   const [openNav, setOpenNav] = React.useState(false);
 
@@ -30,13 +30,8 @@ export function Nav() {
         </a>
       </Typography>
       <Typography as="li" size="sm" className="p-1 font-normal">
-        <a href="#" className="flex text-gray-600 items-center">
+        <a href="/faq" className="flex text-gray-600 items-center">
           FAQs
-        </a>
-      </Typography>
-      <Typography as="li" size="sm" className="p-1 font-normal">
-        <a href="#" className="flex text-gray-600 items-center font-normal">
-          Other
         </a>
       </Typography>
     </ul>
@@ -47,21 +42,26 @@ export function Nav() {
       <div className="fixed z-10 w-full bg-white">
         <Navbar className="max-w-full rounded-none px-2 py-2 lg:px-8 lg:py-4 bg-white">
           <div className="flex items-center justify-between text-blue-gray-900">
-            <Typography
-              as="a"
-              href="#"
-              className="mr-4 cursor-pointer py-1.5 font-medium"
-            >
-              DinerDash
-            </Typography>
+            <div className="flex flex-row justify-between items-center align-middle">
+              <a
+                href="/"
+                className="text-black tracking-widest text-2xl font-normal font-poppins flex items-center"
+              >
+                <img src={logo} className="h-6 w-auto" alt="Logo" /> &nbsp;diner
+                <span className="text-green-600 tracking-widest font-black">
+                  Dash
+                </span>
+              </a>
+            </div>
+
             <div className="flex items-center gap-4">
               <div className="mr-4 hidden lg:block">{navList}</div>
               <div className="flex items-center gap-x-1">
                 <Button
                   size="sm"
-                  className="hidden lg:inline-block rounded-lg text-green-600 bg-transparent hover:shadow-none shadow-none"
+                  className="hidden lg:inline-block rounded-lg font-bold text-green-600 bg-transparent hover:shadow-none shadow-none"
                 >
-                  <span>Log In</span>
+                  <span>LogIn</span>
                 </Button>
                 <Button
                   size="sm"

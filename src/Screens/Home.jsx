@@ -383,7 +383,7 @@ function Home() {
                   </h1>
                 </div>
               </div>
-              <img src={scanner} className="w-fit h-fit" />
+              <img src={scanner} className="w-fit h-fit max-h-fit" />
               {/* <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
                 <h1 className="text-6xl scale-150 text-center">&lt;&lt;</h1>
               </div> */}

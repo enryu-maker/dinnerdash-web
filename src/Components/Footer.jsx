@@ -54,7 +54,7 @@ export default function Foter() {
         <div className="w-full sm:flex sm:items-center sm:justify-between text-black">
           <Footer.Copyright
             href="#"
-            by="Flowbite™"
+            by="NerdTech"
             year={2022}
             className="text-black"
           />

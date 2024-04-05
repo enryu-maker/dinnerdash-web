@@ -113,7 +113,7 @@ function Home() {
   return (
     <div className="">
       <div className="relative">
-        <div className="h-screen w-full bg-home-bg bg-contain bg-right bg-no-repeat">
+        <div className="h-screen w-full md:bg-home-bg bg-contain bg-right bg-no-repeat">
           <motion.div
             initial={{
               transform: "translateZ(4px) translateY(-2px)",
@@ -127,14 +127,14 @@ function Home() {
               duration: 1,
               ease: "easeInOut",
             }}
-            className="left-32  justify-start w-1/2 mt-40 align-middle absolute transform -translate-x-1/2 -translate-y-1/2 text-black font-bold"
+            className="left-32 md:justify-start md:w-1/2 mt-40 align-middle absolute transform -translate-x-1/2 -translate-y-1/2 text-black font-bold"
           >
             <p className="text-7xl pb-10 text-green-600">QR Code Menu</p>
             <p className="text-5xl font-normal pb-2">
               The Future of Restaurants in
             </p>
 
-            <p className="text-4xl font-medium">New Form</p>
+            <p className="md:text-4xl font-medium">New Form</p>
             <p className="font-normal pt-10">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
               nulla exercitationem perferendis consequuntur, labore impedit
@@ -383,7 +383,7 @@ function Home() {
                   </h1>
                 </div>
               </div>
-              <img src={scanner} className="w-fit h-2/3" />
+              <img src={scanner} className="w-fit h-fit" />
               {/* <div className="bg-white text-green-600 border-green-600 border-2 p-4 text-center mt-4 rounded-lg">
                 <h1 className="text-6xl scale-150 text-center">&lt;&lt;</h1>
               </div> */}
